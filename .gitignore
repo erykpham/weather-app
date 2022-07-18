@@ -11,6 +11,9 @@
 # production
 /build
 
+# not want to public on github
+/src/services
+
 # misc
 .DS_Store
 .env.local

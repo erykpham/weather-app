@@ -17,28 +17,51 @@ function TemperatureAndDetails() {
                />
             </div>
 
-            <p className='w-1/3 text-2xl text-white text-center'>34°</p>
+            <p className='w-1/3 text-5xl text-white text-center'>&nbsp;34°</p>
 
-            <div className='flex flex-col gap-5 items-center w-1/3'>
-               <div>
-                  <div className='flex justify-center items-center text-white text-sm'>
-                     <Unicons.UilTemperature className='opacity-70' size="18"  />
-                     <p className='opacity-70'>&nbsp;Real fell:&nbsp;</p>
-                     <span className='opacity-100 font-medium'>57°</span>
-                  </div>
-
-                  <div className='flex justify-center items-center text-white text-sm'>
-                     <Unicons.UilTear className='opacity-70' size="18" />
-                     <p className='opacity-70'>&nbsp;Humidity:&nbsp;</p>
-                     <span className='opacity-100 font-medium'>64%</span>
-                  </div>
-
-                  <div className='flex justify-center items-center text-white text-sm'>
-                     <Unicons.UilWind className='opacity-70' size="18"  />
-                     <p className='opacity-70'>&nbsp;Wind:&nbsp;</p>
-                     <span className='opacity-100 font-medium'>10 km/h</span>
-                  </div>
+            <div className='flex flex-col items-end gap-1 w-1/3'>
+               <div className='flex justify-center items-center text-white text-sm'>
+                  <Unicons.UilTemperature className='opacity-80' size='18' />
+                  <p className='opacity-80'> Real fell: </p>
+                  <span className='opacity-100 font-medium'>57°</span>
                </div>
+
+               <div className='flex justify-center items-center text-white text-sm'>
+                  <Unicons.UilTear className='opacity-80' size='18' />
+                  <p className='opacity-80'> Humidity: </p>
+                  <span className='opacity-100 font-medium'>64%</span>
+               </div>
+
+               <div className='flex justify-center items-center text-white text-sm'>
+                  <Unicons.UilWind className='opacity-80' size='18' />
+                  <p className='opacity-80'> Wind: </p>
+                  <span className='opacity-100 font-medium'>10 km/h</span>
+               </div>
+            </div>
+         </div>
+         <div className='flex justify-between items-center mt-5'>
+            <div className='flex justify-center items-center text-white text-sm'>
+               <Unicons.UilSun className='opacity-80' size='18' />
+               <p className='opacity-80'> Rise: </p>
+               <span className='opacity-100 font-medium'>04:50 </span>
+            </div>
+            <p className='opacity-80 text-white'>|</p>
+            <div className='flex justify-center items-center text-white text-sm'>
+               <Unicons.UilSunset className='opacity-80' size='18' />
+               <p className='opacity-80'> Set: </p>
+               <span className='opacity-100 font-medium'>09:06 PM</span>
+            </div>
+            <p className='opacity-80 text-white'>|</p>
+            <div className='flex justify-center items-center text-white text-sm'>
+               <Unicons.UilArrowUp className='opacity-80' size='18' />
+               <p className='opacity-80'> High: </p>
+               <span className='opacity-100 font-medium'>62°</span>
+            </div>
+            <p className='opacity-80 text-white'>|</p>
+            <div className='flex justify-center items-center text-white text-sm'>
+               <Unicons.UilArrowDown className='opacity-80' size='18' />
+               <p className='opacity-80'> Low: </p>
+               <span className='opacity-100 font-medium'>54°</span>
             </div>
          </div>
       </div>
