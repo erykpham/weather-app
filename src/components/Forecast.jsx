@@ -1,5 +1,5 @@
 import React from 'react';
-function forecast({ title, foreCast }) {
+function forecast({ title, forecast }) {
    return (
       <>
          <div className='flex justify-start text-l uppercase text-white mt-6 mb-2'>
@@ -9,7 +9,7 @@ function forecast({ title, foreCast }) {
          <hr />
 
          <div className='flex justify-between items-center gap-2 mt-1 text-sm'>
-            {foreCast.map((f, index) => (
+            {forecast.map((f, index) => (
                <div key={index} className='flex flex-col items-center justify-between gap-4 mt-1'>
                   <p>{f.title}</p>
                   <img
