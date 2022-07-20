@@ -21,22 +21,30 @@ function App() {
       };
       fetch();
    }, [query, units]);
+   const [isMobile, setMobile] = useState(window.innerWidth < 576);
+   useEffect(() => {
+      window.onresize = function () {
+         setMobile(this.innerWidth < 576);
+      };
+   }, []);
    return (
-      <div className='mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700  text-white h-fit shadow-xl shadow-gray-400 selection:bg-white selection:text-blue-600  whitespace-pre'>
-         <TopButtons setQuery={setQuery} />
-         <Inputs setQuery={setQuery} setUnits={setUnits}/>
+      <div className={'mx-auto max-w-screen-md md:mt-5 pt-20 xsm:pt-4 pb-6 xsm:pb-10 px-3 xsm:px-7 md:px-28 bg-gradient-to-br from-cyan-700 to-blue-700  text-white h-fit shadow-xl shadow-gray-400 selection:bg-white selection:text-blue-600  whitespace-pre relative'}>
+         <TopButtons setMobile={setMobile} isMobile={isMobile} setQuery={setQuery} />
+         <Inputs
+            setMobile={setMobile}
+            isMobile={isMobile}
+            setQuery={setQuery}
+            setUnits={setUnits}
+         />
          {weather && (
             <div>
-               <TimeAndLocation weather={weather} />
+               <TimeAndLocation weather={weather} isMobile={isMobile}/>
                <TemperatureAndDetails weather={weather} />
                <Forecast title='hourly forecast' forecast={weather.hourly} />
                <Forecast title='daily forecast' forecast={weather.daily} />
             </div>
          )}
-         <div>
-
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d953718.7082188143!2d105.0921435889076!3d20.974041513128146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135008e13800a29%3A0x2987e416210b90d!2zSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1658248276093!5m2!1svi!2s" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-         </div>
+         <div></div>
       </div>
    );
 }

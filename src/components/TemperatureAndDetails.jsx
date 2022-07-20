@@ -80,26 +80,26 @@ function TemperatureAndDetails({
                </div>
             </div>
          </div>
-         <div className='flex justify-between items-center mt-5'>
-            <div className='flex justify-center items-center text-white text-sm'>
+         <div className='flex justify-between  items-center mt-5'>
+            <div className='flex justify-start xsm:justify-center items-center text-white text-sm'>
                <Unicons.UilSun className='opacity-80' size='18' />
                <p className='opacity-80'> Rise: </p>
                <span className='opacity-100 font-medium'>{sunrise}</span>
             </div>
             <p className='opacity-80 text-white'>|</p>
-            <div className='flex justify-center items-center text-white text-sm'>
+            <div className='flex justify-start xsm:justify-center items-center text-white text-sm'>
                <Unicons.UilSunset className='opacity-80' size='18' />
                <p className='opacity-80'> Set: </p>
                <span className='opacity-100 font-medium'>{sunset}</span>
             </div>
             <p className='opacity-80 text-white'>|</p>
-            <div className='flex justify-center items-center text-white text-sm'>
+            <div className='flex justify-start xsm:justify-center items-center text-white text-sm'>
                <Unicons.UilArrowUp className='opacity-80' size='18' />
                <p className='opacity-80'> High: </p>
                <span className='opacity-100 font-medium'>{temp_max}°</span>
             </div>
-            <p className='opacity-80 text-white'>|</p>
-            <div className='flex justify-center items-center text-white text-sm'>
+            <p className=' hidden xsm:block opacity-80 text-white'>|</p>
+            <div className='hidden xsm:flex justify-start xsm:justify-center items-center text-white text-sm'>
                <Unicons.UilArrowDown className='opacity-80' size='18' />
                <p className='opacity-80'> Low: </p>
                <span className='opacity-100 font-medium'>{temp_min}°</span>
